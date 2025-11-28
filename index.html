@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة سكور تأثير X (تويتر)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 حاسبة سكور تأثير المشروع</h1>
+        <p>أدخل اسم المستخدم (اليوزر) الخاص بحساب X لمعرفة مدى تأثيرك في مجتمع مشروعنا.</p>
+        
+        <input type="text" id="usernameInput" placeholder="أدخل اسم المستخدم هنا (مثال: elonmusk)">
+        <button id="calculateButton">احسب السكور</button>
 
+        <div id="loadingIndicator" class="hidden">
+            <div class="spinner"></div>
+            <p>جاري جلب وتحليل البيانات...</p>
+        </div>
+
+        <div id="resultContainer" class="hidden">
+            <div class="score-card">
+                <img id="profileImage" alt="صورة المستخدم" class="profile-img" />
+                <h2 id="usernameDisplay"></h2>
+                
+                <div class="score-value">
+                    <span id="scoreDisplay">--</span>
+                    <p>السكور من 1000</p>
+                </div>
+            </div>
+            
+            <div class="details">
+                <h3>إحصائيات التفصيلية</h3>
+                <p>عدد المتابعين: <span id="followersCount"></span></p>
+                <p>مرات ذكر الكلمات المفتاحية: <span id="mentionsCount"></span></p>
+            </div>
+            
+            <a id="downloadImage" download="score_card.png" class="download-button hidden">تحميل الصورة</a>
+        </div>
+
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
